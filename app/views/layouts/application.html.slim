@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+      title
+        | Cricket App
+      = csrf_meta_tags
+      = javascript_include_tag "application"
+      = stylesheet_link_tag "application"
+  body
+    nav.navbar.navbar-expand-sm.bg-dark.navbar-dark.shadow-sm.bg-black.rounded
+      .navbar-brand
+        .navbar-collapse.collapse.w-100.order-1.order-md-0.dual-collapse2
+      .mx-auto.order-0
+        button.navbar-toggler[type="button" data-toggle="collapse" data-target=".dual-collapse2"]
+          span.navbar-toggler-icon
+    .h6.global-message
+      |
+      .shadow-sm.bg-white.rounded
+          - if notice
+            p.alert.alert-success
+              = notice
+          - if alert
+            p.alert.alert-danger
+              = alert
+    .container.mw-100.w-80
+      hr[style="border: 0.1px"]
+        |
+      = yield
+    = render 'layouts/footer'

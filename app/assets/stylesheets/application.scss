@@ -1,0 +1,233 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ */
+
+@import "font-awesome";
+@import "bootstrap";
+
+.jumbotron {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding: 0.1rem;
+    margin-bottom: 1rem;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    /* Margin bottom by footer height */
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    /* Set the fixed height of the footer here */
+    line-height: 60px;
+    /* Vertically center the text there */
+    background-color: #eeeeee;
+}
+
+.global-message {
+    position: absolute;
+    right: 40px;
+    z-index: +1;
+}
+
+.table-responsive {
+    max-height: 600px;
+}
+
+.btn-space {
+    margin-right: 5px;
+}
+
+.mypage-loading {
+    position: absolute;
+    z-index: +1;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/* bootstrap.css font size*/
+
+* {
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+/* dropdown css */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.308);
+    list-style: none;
+    padding: 5px 0;
+    margin: 2px 0 0 0;
+    > li > a {
+        display: block;
+        color: #333;
+        white-space: nowrap;
+        text-decoration: none;
+        padding: 3px 20px;
+        &:hover {
+            color: rgb(0, 0, 0);
+            background-color: #37e23cb4;
+        }
+    }
+}
+
+.open > .dropdown-menu {
+    display: block;
+}
+
+.triangle {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.dropdown.dropdown-right > .dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+/* dropdown css end */
+
+/* error form fields*/
+
+.field_with_errors label,
+.field_with_errors .form-control-feedback,
+.field_with_errors .form-control-label,
+.field_with_errors .col-form-label,
+.field_with_errors .form-check-label,
+.field_with_errors .custom-control {
+    color: #d9534f;
+}
+
+.field_with_errors .form-control {
+    border-color: #d9534f;
+}
+
+.error {
+    color: #d9534f;
+}
+
+.field_with_errors .input-group-addon {
+    color: #d9534f;
+    border-color: #d9534f;
+    background-color: #fdf7f7;
+}
+
+.field_with_errors .form-control-danger {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23d9534f' viewBox='-2 -2 7 7'%3E%3Cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3E%3Ccircle r='.5'/%3E%3Ccircle cx='3' r='.5'/%3E%3Ccircle cy='3' r='.5'/%3E%3Ccircle cx='3' cy='3' r='.5'/%3E%3C/svg%3E");
+}
+
+.static-page-submit {
+    text-align: center;
+}
+
+.text-align-right {
+    text-align: right;
+    .btn-success {
+        margin-right: 13px;
+    }
+    .btn-info {
+        margin-right: 13px;
+    }
+}
+
+.container-fluid {
+    margin-top: 4%;
+}
+
+.error-message {
+    color: red;
+}
+
+.hide {
+    display: none !important;
+}
+
+.white {
+    color: white;
+}
+
+.disable-page {
+    background-color: #efefef;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+    opacity: 0.5; /* in FireFox */
+    filter: alpha(opacity=50); /* in IE */
+}
+
+.modal-header {
+    padding: 9px 15px;
+    border-bottom: 3px solid rgb(81, 160, 45);
+    // background-color: #1e8f10;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.card-header {
+    padding: 0.3rem 0.9rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
