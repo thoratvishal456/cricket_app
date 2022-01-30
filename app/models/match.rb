@@ -5,7 +5,7 @@ class Match
   field :round, type: String
   field :group_name, type: String
   field :score, type: Integer
-  field :status, type: String
+  field :result, type: String, default: "pending"
 
 
   has_and_belongs_to_many :teams

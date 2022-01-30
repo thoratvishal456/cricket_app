@@ -14,6 +14,10 @@ gem 'slim-rails'
 gem 'bootstrap', '~> 4.4.1'
 gem 'bootstrap-kaminari-views'
 gem 'font-awesome-rails'
+gem 'simple_form'
+gem 'jquery-rails'
+gem 'jquery-ui-rails', '5.0.5'
+gem 'pry'
 
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
