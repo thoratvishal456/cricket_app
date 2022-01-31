@@ -1,0 +1,22 @@
+- if @winner
+  .card.text-center
+    .card-header
+      |  Final Result
+    .card-body
+      h5.card-title
+        | Winner # #{@winner.name.upcase}
+      p.card-text
+        | Runner # #{@runner_up.name.upcase}
+
+- if @qualified_teams
+  .table-responsive
+    table.table
+      thead
+        tr
+          th[scope="col"]
+            | Teams
+      tbody
+        - @qualified_teams.each do |team|
+          tr
+            td
+              =team

@@ -12,6 +12,8 @@
           | Second Team
         th[scope="col"]
           | result
+        th[scope="col"]
+          | Update
     tbody
       - @matches.each do |match|
         tr
@@ -25,3 +27,5 @@
             =match.teams.second.name
           td
             =match.result
+          td= link_to "Update Score", edit_match_path(match), class: 'btn btn-sm btn-info update-salon-data', data: {remote: true}
+

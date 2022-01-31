@@ -8,19 +8,29 @@
             span[aria-hidden="true"]
               | ×
         - if @match
-          = simple_form_for @match, html: {class: 'needs-validation', id: 'salon_form'}, defaults: {input_html: { class: 'form-control input-sm'}}, remote: true do |f|
+          = simple_form_for @match, html: {class: 'needs-validation', id: 'match_form'}, defaults: {input_html: { class: 'form-control input-sm'}}, remote: true do |f|
             .modal-body
               .form-row
                 .col
-                  = f.input :group_name, input_html:{id: 'group_name'}, :as => :collection_select, collection: GROUPS
+                  = f.input :group_name, input_html:{id: 'group_name'}, :as => :collection_select, collection: GROUPS, required: true 
                 .col
-                  = f.input :round, input_html:{id: 'round'}, :as => :collection_select, collection: ROUNDS
+                  = f.input :round, input_html:{id: 'round'}, :as => :collection_select, collection: ROUNDS, required: true 
               br/
               .form-row
                 .col
-                  = f.association :teams, :as => :collection_select, collection: @teams, label: "Select Team", value_method: :id, input_html: { include_hidden: false, multiple: true } 
+                  = select_tag "team_ids", raw("#{@options}"), id: "select_teams", class: "form-control selectpicker", name: "match[team_ids][]",  multiple: true, placeholder: 'select options',  required: true, data: {"max-options": 2}
+                .col
             br
-            = f.submit "Submit", class: 'btn btn-sm btn-block btn-success'
+            = f.submit "Submit", id: "submit_match", class: 'btn btn-sm btn-block btn-success'
 
-    
-    
+javascript:
+  $('select').selectpicker();
+  $("#select_teams").change(function(){
+    if ($(this).val().length < 2){
+      alert("Please select another teams")
+      $("#submit_match").prop('disabled', true);
+    } else {
+      $("#submit_match").prop('disabled', false);
+    }
+
+  });

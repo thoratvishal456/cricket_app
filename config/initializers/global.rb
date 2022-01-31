@@ -1,2 +1,3 @@
 ROUNDS = ['FIRST', 'SECOND', 'QUARTER_FINAL', 'SEMI_FINAL', 'FINAL'].freeze
-GROUPS = ['BOTH', 'A', 'B']
+GROUPS = ['A', 'B', 'BOTH']
+$CURRENT_ROUND = 'FIRST'

@@ -1,0 +1,28 @@
+.modal-body
+  .salon-details
+    .bg-white.rounded
+        .modal-header
+          b#exampleModalLongTitle.modal-title
+            | Match *( #{@match.teams.first.name} vs #{@match.teams.second.name} )
+          button.close[type="button" data-dismiss="modal" aria-label="Close"]
+            span[aria-hidden="true"]
+              | ×
+        - if @match
+          = simple_form_for @match, url: "/matches/update_score/#{@match.id.to_s}", html: {class: 'needs-validation', id: 'match_score_form'}, defaults: {input_html: { class: 'form-control input-sm'}}, remote: true do |f|
+            .modal-body
+              .form-row
+                .col
+                  = f.input :group_name, input_html:{id: 'group_name'}
+                .col
+                  = f.input :round, input_html:{id: 'round'}
+              br/
+              .form-row
+                .col
+                  = f.input :t1_score, input_html:{id: 't1_score'}
+                .col
+                  = f.input :t2_score, input_html:{id: 't2_score'}
+            br
+            = f.submit "Submit", class: 'btn btn-sm btn-block btn-success'
+
+    
+    

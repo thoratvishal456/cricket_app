@@ -18,6 +18,7 @@ gem 'simple_form'
 gem 'jquery-rails'
 gem 'jquery-ui-rails', '5.0.5'
 gem 'pry'
+gem 'bootstrap-select-rails'
 
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets

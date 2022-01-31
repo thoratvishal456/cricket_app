@@ -1,7 +1,17 @@
-.col-md-12
-  = link_to "New Match", new_match_path, remote: true, target: "_blank", :class => 'btn btn-primary'
+.container-fluid
+  .row
+    .col-md-6
+      = link_to "New Match", new_match_path, remote: true, target: "_blank", :class => 'btn btn-primary'
+    .col-md-6
+      = link_to "Show Results", match_show_result_path, remote: true, target: "_blank", :class => 'btn btn-primary'
+    .col-md-12
+      .all_qualified
+    .col-md-12
+      h4.text-center
+        | #{$CURRENT_ROUND.humanize} round
 br/
-= render 'index_table'
+.index_table
+  = render 'index_table'
 
 #myMatchModal.modal.fade[tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"]
   .modal-dialog.modal-lg.mw-100.w-75
