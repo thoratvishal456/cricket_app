@@ -1,0 +1,10 @@
+.container-fluid
+  .card.text-center
+    .card-header.bg-warning
+      |  Match Result
+    .card-body
+      h5.card-title
+        | #{winner.map {|k, v| k+" is winner with Score: "+v.to_s}.first}
+      p.card-text
+        | #{runner_up.map {|k, v| k+" is runner with Score: "+v.to_s}.first}
+br/
