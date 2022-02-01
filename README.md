@@ -1,24 +1,26 @@
-# README
+# Rails Cricket App Using Trailblazer
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation
 
-Things you may want to cover:
+If you don't have Ruby, install it (e.g., by using [rvm](https://rvm.io/) and when you finish, just run this:
 
-* Ruby version
+```sh
+gem install bundler
+bundle install
+```
 
-* System dependencies
+Then configure database `MongoDB`. Check `config/mongoid.yml`:
 
-* Configuration
+```sh
+rails db:migrate
+```
 
-* Database creation
+## Run Server
 
-* Database initialization
+```bash
+rails s
+```
 
-* How to run the test suite
+## Demo here
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://drive.google.com/file/d/1z-2m0bHkTmYYmcO-dqDLMumi6T7FLTbk/view?usp=sharing
