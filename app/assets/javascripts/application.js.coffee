@@ -11,6 +11,7 @@
 # about supported directives.
 #= require jquery3
 #= require bootstrap
+#= require bootstrap-select
 #= require rails-ujs
 #= require turbolinks
 #= require_tree .

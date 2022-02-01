@@ -1,0 +1,66 @@
+# .rubocop.yml
+
+# rubocop config files for Ruby 3.0 / Rails 6+ project
+
+AllCops:
+  TargetRubyVersion: 3.0
+  NewCops: enable
+  SuggestExtensions: false
+
+  Include:
+    - 'config.ru'
+    - 'Gemfile'
+    - 'Guardfile'
+    - 'Rakefile'
+    - 'app/**/*.rb'
+    - 'config/**/*.rb'
+    - 'lib/**/*.rb'
+    - 'spec/**/*.rb'
+    - 'db/seeds.rb'
+
+  Exclude:
+    - 'bin/*'
+    - 'db/schema.rb'
+    - 'db/migrate/*'
+    - 'public/**/*'
+    - 'tmp/**/*'
+    - '.git/**/*'
+
+Layout/IndentationConsistency:
+  EnforcedStyle: 'indented_internal_methods'
+
+Layout/LineLength:
+  Max: 80
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Guardfile'
+    - 'config/environments/*'
+
+Metrics/ClassLength:
+  Exclude:
+    - 'db/seeds.rb'
+  Max: 150
+
+Metrics/ModuleLength:
+  Max: 150
+
+Naming/FileName:
+  Exclude:
+    - 'Gemfile'
+    - 'Guardfile'
+    - 'Rakefile'
+
+Style/Documentation:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: single_quotes
+
+Lint/UnreachableCode:
+  Exclude:
+    - '*/**/concepts/**/operation/**/*'
+Style/SignalException:
+  Exclude:
+    - '*/**/concepts/**/operation/**/*'
