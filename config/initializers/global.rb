@@ -1,2 +1,3 @@
-ROUNDS = ['FIRST', 'SECOND', 'QUARTER_FINAL', 'SEMI_FINAL', 'FINAL'].freeze
-GROUPS = ['BOTH', 'A', 'B']
+ROUNDS = %w[FIRST SECOND QUARTER_FINAL SEMI_FINAL FINAL].freeze
+GROUPS = %w[A B BOTH]
+Setting.current_round('FIRST')
